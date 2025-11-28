@@ -1,4 +1,4 @@
-/* ========== VARIABLES ========== */
+/* ======VARIABLES ====== */
 :root {
     --bg: #f8fafc;
     --card: #ffffff;
@@ -1222,4 +1222,96 @@ body.page-loaded {
     fill: #1a1f2e;
 }
 
+}
+/* ========== Stats Section ========== */
+.stats {
+    padding: 70px 0;
+    text-align: center;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    background: #fff;
+    padding: 32px;
+    width: 260px;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 22px rgba(0,0,0,0.12);
+}
+
+/* Circle Icons */
+.stat-icon {
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6b5bff, #ff6ec4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+
+.stat-icon img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Number Counter */
+.counter {
+    font-size: 38px;
+    font-weight: 700;
+    color: #2c2f33;
+}
+
+.stat-card p {
+    margin-top: 6px;
+    font-size: 15px;
+    color: #555;
+}
+/* ========== Floating CTA Button ========== */
+.floating-cta {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: linear-gradient(135deg, #6b5bff, #ff6ec4);
+    color: #fff;
+    padding: 14px 22px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+    cursor: pointer;
+    transition: transform .25s ease, box-shadow .25s ease;
+    z-index: 9999;
+}
+
+.floating-cta:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 12px 26px rgba(0,0,0,0.25);
+}
+
+.floating-cta img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.floating-cta span {
+    font-size: 15px;
+    font-weight: 600;
 }

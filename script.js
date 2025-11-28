@@ -239,5 +239,47 @@ document.addEventListener('DOMContentLoaded', () => {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(restartAnimation, 120);
   });
+
+  // ========== Animated Number Counters ==========
+const counters = document.querySelectorAll(".counter");
+let counterStarted = false;
+
+function startCounters() {
+    if (counterStarted) return;
+    const sectionPos = document.querySelector("#stats").getBoundingClientRect().top;
+    const screenPos = window.innerHeight - 120;
+
+    if (sectionPos < screenPos) {
+        counters.forEach(counter => {
+            let target = +counter.getAttribute("data-target");
+            let count = 0;
+            let speed = target / 200;
+
+            let updateCount = () => {
+                if (count < target) {
+                    count += speed;
+                    counter.innerText = Math.floor(count);
+                    requestAnimationFrame(updateCount);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            updateCount();
+        });
+
+        counterStarted = true;
+    }
+}
+
+window.addEventListener("scroll", startCounters);
+// Floating CTA action
+function openCTA() {
+    const el = document.querySelector("#contact") 
+           || document.querySelector("#pricing") 
+           || document.body;
+
+    el.scrollIntoView({ behavior: "smooth" });
+}
+
 });
 });
