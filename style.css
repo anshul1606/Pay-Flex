@@ -1267,6 +1267,7 @@ body.page-loaded {
     width: 40px;
     height: 40px;
     object-fit: contain;
+    display:block;
 }
 
 /* Number Counter */
@@ -1307,6 +1308,7 @@ body.page-loaded {
 .floating-cta img {
     width: 24px;
     height: 24px;
+    display: block;
     object-fit: contain;
     filter: brightness(0) invert(1);
 }
