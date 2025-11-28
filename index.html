@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>PayFlex — Smarter Payments (Premium)</title>
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- main styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- skip link -->
+    <a class="skip-link" href="#main">Skip to content</a>
+<div class="divider-wave"></div>
+
+    <!-- NAV -->
+    <header class="nav container" role="banner">
+        <div class="nav-left">
+            <button class="nav-brand" aria-label="Home" onclick="scrollToTop()">
+                <!-- SVG logo -->
+                <svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <defs>
+                        <linearGradient id="g1" x1="0" x2="1">
+                            <stop offset="0" stop-color="#6b5bff" />
+                            <stop offset="1" stop-color="#ff6ec4" />
+                        </linearGradient>
+                    </defs>
+                    <rect rx="6" width="24" height="24" fill="url(#g1)"></rect>
+                    <text x="50%" y="55%" font-size="11" text-anchor="middle" fill="#fff" font-family="Inter"
+                        font-weight="700">PF</text>
+                </svg>
+                <span class="brand-text">PayFlex</span>
+            </button>
+        </div>
+
+        <nav class="nav-center" aria-label="Primary">
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-right">
+            <button id="themeToggle" class="icon-btn" aria-pressed="false" title="Toggle dark mode">🌙</button>
+            <button id="menuBtn" class="hamburger icon-btn" aria-expanded="false" aria-controls="mobileMenu"
+                aria-label="Open menu">☰</button>
+            <a class="cta primary" href="#signup" role="button">Get Started</a>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <nav id="mobileMenu" class="mobile-menu" aria-hidden="true" aria-label="Mobile Navigation">
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a class="cta primary" href="#signup">Get Started</a></li>
+        </ul>
+    </nav>
+
+    <main id="main">
+
+        <!-- HERO -->
+        <section id="hero" class="hero" data-reveal>
+            <div class="container hero-inner">
+                <div class="hero-content">
+                    <h1 class="hero-title">Fast, secure payments — for ambitious businesses</h1>
+                    <p class="hero-sub">Accept all payment modes, reconcile instantly, and scale globally with minimal
+                        fuss.
+                        Built for developers, loved by finance teams.</p>
+
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#signup" id="getStartedBtn">Create account — it's free</a>
+                        <button class="btn btn-ghost" id="demoBtn">View demo dashboard</button>
+                    </div>
+
+                    <ul class="trust-list" aria-hidden="true">
+                        <li><img alt="Trusted" src="images/trusted.png" /></li>
+                        <li><img alt="PCI DSS" src="images/pci.png" /></li>
+                        <li><img alt="ISO" src="images/iso.png" /></li>
+                    </ul>
+                </div>
+
+                <div class="hero-art" aria-hidden="true">
+                    <!-- blob -->
+                    <svg class="blob" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <g transform="translate(300,300)">
+                            <path
+                                d="M120,-180C150,-150,180,-120,190,-80C200,-40,190,0,170,30C150,60,120,80,90,110C60,140,30,180,-10,190C-50,200,-100,180,-140,150C-180,120,-210,80,-220,30C-230,-20,-220,-80,-180,-120C-140,-160,-70,-180,-10,-170C50,-160,100,-210,120,-180Z"
+                                fill="url(#lg)" />
+                        </g>
+                        <defs>
+                            <linearGradient id="lg" x1="0" x2="1">
+                                <stop offset="0" stop-color="#6b5bff" />
+                                <stop offset="1" stop-color="#ff6ec4" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+
+                    <div class="glass-preview">
+                        <div class="preview-top">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="preview-body">
+                            <div class="stat">
+                                <div class="stat-value">₹ 2.4M</div>
+                                <div class="stat-label">Revenue (30d)</div>
+                            </div>
+                            <div class="mini-chart" aria-hidden="true"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MINI CTA STATS -->
+        <section class="mini-cta container" data-reveal="delay-1">
+            <div class="mini-grid">
+                <div class="mini">
+                    <strong>99.95%</strong>
+                    <p>Uptime</p>
+                </div>
+                <div class="mini">
+                    <strong>50k+</strong>
+                    <p>Businesses</p>
+                </div>
+                <div class="mini">
+                    <strong>2M</strong>
+                    <p>Transactions / day</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SPLIT -->
+        <section class="split container">
+
+            <div class="left slide-left" data-reveal="delay-1">
+                <h2>Grow your business</h2>
+                <p>Powerful API + secure transactions — build once, accept everywhere.</p>
+            </div>
+
+            <div class="right slide-right hero-images-wrapper" data-reveal="delay-1">
+
+                <div class="hero-images float-parallax">
+                    <div class="img-card glass gradient-border">
+                        <img src="images/hero1.png" alt="payments preview" class="hero-img">
+                    </div>
+
+                    <div class="img-card glass gradient-border">
+                        <img src="images/payment-illustration.png" alt="demo payments" class="hero-img">
+                    </div>
+                </div>
+
+                <div class="hero-bottom-content fade-zoom">
+                    <h3>Accept UPI, Cards & Wallets</h3>
+                    <p>
+                        Build blazing-fast payment experience with modern UI components tailored for your business.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+<section class="logo-escalator">
+  <div class="escalator-row">
+    <div class="escalator-track">
+      <!-- Repeat logos - use your files in images/brands/ -->
+      <img src="images/brands/PhonePe.png" alt="PhonePe-like">
+      <img src="images/brands/Paytm-Logo.PNG" alt="Paytm-like">
+      <img src="images/brands/google-pay.png" alt="GooglePay-like">
+      <img src="images/brands/amazonpay.png" alt="AmazonPay-like">
+      <img src="images/brands/airtel.png" alt="Airtel-like">
+      <img src="images/brands/swiggy.png" alt="Swiggy-like">
+      <img src="images/brands/zomato.png" alt="Zomato-like">
+      <img src="images/brands/ola.png" alt="Ola-like">
+      <img src="images/brands/uber.png" alt="Uber-like">
+
+      <!-- duplicate same set immediately after to ensure seamless loop -->
+      <img src="images/brands/PhonePe.png" alt="PhonePe-like">
+      <img src="images/brands/Paytm-Logo.PNG" alt="Paytm-like">
+      <img src="images/brands/google-pay.png" alt="GooglePay-like">
+      <img src="images/brands/amazonpay.png" alt="AmazonPay-like">
+      <img src="images/brands/airtel.png" alt="Airtel-like">
+      <img src="images/brands/swiggy.png" alt="Swiggy-like">
+      <img src="images/brands/zomato.png" alt="Zomato-like">
+      <img src="images/brands/ola.png" alt="Ola-like">
+      <img src="images/brands/uber.png" alt="Uber-like">
+    </div>
+  </div>
+</section>
+        <!-- STEPS -->
+        <section class="steps" data-reveal>
+            <div class="container">
+                <h2>How it works</h2>
+                <div class="step-container" id="stepContainer">
+                    <div class="step highlight-on-scroll">1. Create account</div>
+                    <div class="step highlight-on-scroll">2. Add bank details</div>
+                    <div class="step highlight-on-scroll">3. Start accepting payments</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DASHBOARD + STICKY -->
+        <section class="sticky-wrapper" data-reveal="delay-1">
+            <div class="container dashboard-inner">
+                <div class="sticky">
+                    <h3>Smart dashboard</h3>
+                    <p>Monitor payments, settlements and disputes in one place.</p>
+                </div>
+                <div class="sticky-content">
+                    <div class="card fade-slide">Real-time reports</div>
+                    <div class="card fade-slide">Track settlements</div>
+                    <div class="card fade-slide">Instant refunds</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- counters -->
+        <section class="counters" data-reveal>
+            <div class="container counters-inner">
+                <div class="counter-box">
+                    <div class="counter" data-target="100000">0</div>
+                    <p>Merchants</p>
+                </div>
+                <div class="counter-box">
+                    <div class="counter" data-target="5000000">0</div>
+                    <p>Daily Transactions</p>
+                </div>
+                <div class="counter-box">
+                    <div class="counter" data-target="200">0</div>
+                    <p>Integrations</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- horizontal -->
+        <section class="horizontal" data-reveal="delay-2">
+            <div class="container">
+                <h2>Supported Payment Methods</h2>
+                <div class="horizontal-scroll">
+                    <div class="card-h">Cards</div>
+                    <div class="card-h">UPI</div>
+                    <div class="card-h">Wallets</div>
+                    <div class="card-h">Netbanking</div>
+                    <div class="card-h">EMI</div>
+                    <div class="card-h">Pay Later</div>
+                </div>
+            </div>
+        </section>
+        <!-- wave divider -->
+        <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120">
+            <path fill="#fff"
+                d="M0,32L48,26.7C96,21,192,11,288,16C384,21,480,43,576,53.3C672,64,768,64,864,48C960,32,1056,0,1152,5.3C1248,11,1344,37,1392,50.7L1440,64V120H0Z">
+            </path>
+        </svg>
+        <!-- FEATURES -->
+        <section id="features" class="section features" data-reveal="delay-1">
+            <div class="container">
+                <h2 class="section-title">Everything you need to get paid</h2>
+                <p class="section-sub">A unified platform to accept, reconcile, and disburse payments with ease.</p>
+
+                <div class="features-inner">
+
+                    <div class="feature">
+                        <img src="images/secure_feature.png" alt="Secure Payments">
+                        <h4>24×7 Priority Support</h4>
+                        <p>No delays, no complications — dedicated support that keeps your business running flawlessly.
+                        </p>
+                    </div>
+
+                    <div class="feature">
+                        <img src="images/security.png" alt="Secure Payments">
+                        <h4>Secure Payments</h4>
+                        <p>Industry-level encryption for all transactions.</p>
+                    </div>
+
+                    <div class="feature">
+                        <img src="images/feature_fast.png" alt="Fast Settlements">
+                        <h4>Instant Settlements</h4>
+                        <p>Get your payments credited instantly.</p>
+                    </div>
+
+                </div>
+
+                <div class="cards grid-4" aria-hidden="false">
+                    <article class="card">
+                        <div class="card-ico">💳</div>
+                        <h3 class="card-title">Payments</h3>
+                        <p class="card-desc">Cards, UPI, wallets & more. Easy SDKs & hosted checkout.</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-ico">🤖</div>
+                        <h3 class="card-title">Fraud & Risk</h3>
+                        <p class="card-desc">Real-time risk scoring & chargeback protection.</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-ico">📦</div>
+                        <h3 class="card-title">Payouts</h3>
+                        <p class="card-desc">Bulk disbursals with automated reconciliation.</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-ico">📈</div>
+                        <h3 class="card-title">Insights</h3>
+                        <p class="card-desc">Revenue analytics, cohort reports & exportable CSVs.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="wave-divider">
+  <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+    <path d="M0,96L80,101.3C160,107,320,117,480,133.3C640,149,800,171,960,176C1120,181,1280,171,1360,165.3L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z" fill="#ffffff"></path>
+  </svg>
+</div>
+        <!-- PRODUCTS -->
+        <section id="products" class="section products" data-reveal="delay-2">
+            <div class="container">
+                <h2 class="section-title">Products</h2>
+                <p class="section-sub">Pick the product or combine them to fit your flow.</p>
+
+                <div class="product-row">
+                    <div class="product-card">
+                        <img src="images/product_card.png" alt="Product Card">
+                        <h3>Smart Payment Card</h3>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="images/product_phone.png" alt="Mobile Payment">
+                        <h3>Mobile Payment App</h3>
+                    </div>
+
+                    <div class="product-card">
+                        <h4>Gateway & Checkout</h4>
+                        <p>Hosted checkout, SDKs, UPI auto-detection.</p>
+                        <div class="product-actions">
+                            <button class="btn-sm btn-outline" onclick="openPaymentDemo('gateway')">Try</button>
+                            <a class="link" href="#pricing">Pricing →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<div class="wave-divider">
+  <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+    <path d="M0,96L80,101.3C160,107,320,117,480,133.3C640,149,800,171,960,176C1120,181,1280,171,1360,165.3L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z" fill="#ffffff"></path>
+  </svg>
+</div>
+        <!-- DASHBOARD SHOWCASE -->
+        <section id="dashboard" class="section dashboard" data-reveal="delay-1">
+            <div class="container">
+                <h2 class="section-title">Dashboard demo</h2>
+                <p class="section-sub">Interactive preview of the PayFlex dashboard (demo data).</p>
+
+                <div class="dashboard-grid">
+                    <div class="panel charts">
+                        <h4>Revenue & Conversion</h4>
+                        <div class="chart" id="chartArea" aria-hidden="true"></div>
+                    </div>
+
+                    <div class="panel table">
+                        <h4>Recent Transactions</h4>
+                        <div class="table-wrap">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="txnBody">
+                                    <!-- JS fills demo rows -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-actions">
+                    <button class="btn btn-primary" id="loadDemoBtn">Load demo data</button>
+                    <button class="btn btn-ghost" id="clearDemoBtn">Clear demo</button>
+                </div>
+            </div>
+        </section>
+<div class="wave-divider">
+  <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+    <path d="M0,96L80,101.3C160,107,320,117,480,133.3C640,149,800,171,960,176C1120,181,1280,171,1360,165.3L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z" fill="#ffffff"></path>
+  </svg>
+</div>
+        <!-- PRICING -->
+        <section id="pricing" class="section pricing" data-reveal="delay-2">
+            <div class="container">
+                <h2 class="section-title">Pricing</h2>
+                <p class="section-sub">Transparent, predictable pricing for startups to enterprises.</p>
+
+                <div class="pricing-grid">
+                    <div class="plan card">
+                        <div class="plan-head">Starter</div>
+                        <div class="plan-price">₹0 <small>/ setup</small></div>
+                        <ul>
+                            <li>UPI 0%</li>
+                            <li>Card 1.8%</li>
+                            <li>Email support</li>
+                        </ul>
+                        <button class="btn btn-primary">Select</button>
+                    </div>
+
+                    <div class="plan card popular">
+                        <div class="plan-head">Business</div>
+                        <div class="plan-price">₹999 <small>/ month</small></div>
+                        <ul>
+                            <li>Priority payouts</li>
+                            <li>Advanced analytics</li>
+                            <li>Phone support</li>
+                        </ul>
+                        <button class="btn btn-primary">Select</button>
+                    </div>
+
+                    <div class="plan card">
+                        <div class="plan-head">Enterprise</div>
+                        <div class="plan-price">Custom</div>
+                        <ul>
+                            <li>Dedicated manager</li>
+                            <li>SLA & SSO</li>
+                            <li>Custom contract</li>
+                        </ul>
+                        <button class="btn btn-primary">Contact sales</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+<div class="wave-divider">
+  <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+    <path d="M0,96L80,101.3C160,107,320,117,480,133.3C640,149,800,171,960,176C1120,181,1280,171,1360,165.3L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z" fill="#ffffff"></path>
+  </svg>
+</div>
+        <!-- TESTIMONIALS -->
+        <section id="testimonials" class="section testimonials container" data-reveal="delay-1" style="margin-top:24px">
+            <h2 class="section-title">Loved by businesses</h2>
+
+            <!-- Swiper -->
+            <div class="swiper" style="margin-top:16px">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide testimonial-card">
+                        <p>“PayFlex reduced failed payments and simplified reconciliation—our finance team loves it.”
+                        </p>
+                        <cite>— Meera, CFO @ BrightShop</cite>
+                    </div>
+
+                    <div class="swiper-slide testimonial-card">
+                        <p>“Integration was frictionless. SDKs are clean and docs are great.”</p>
+                        <cite>— Vikram, CTO @ ShipNow</cite>
+                    </div>
+
+                    <div class="swiper-slide testimonial-card">
+                        <p>“Excellent support and near-zero downtime.”</p>
+                        <cite>— Priya, Founder @ LocalKart</cite>
+                    </div>
+
+                    <div class="swiper-slide testimonial-card">
+                        <p>“We scaled to 10k+ daily transactions effortlessly—PayFlex handled everything smoothly.”</p>
+                        <cite>— Arjun, Product Lead @ QuickServe</cite>
+                    </div>
+
+                </div>
+                <!-- pagination -->
+                <div class="swiper-pagination" style="margin-top:10px"></div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section id="signup" class="section cta-section container" data-reveal="delay-2" style="margin-top:24px">
+            <div class="cta-box"
+                style="padding:24px;border-radius:12px;background:linear-gradient(90deg, rgba(107,91,255,0.06), rgba(255,110,196,0.02));box-shadow:var(--shadow);text-align:center;">
+                <h3>Ready to accept payments like a pro?</h3>
+                <div style="margin-top:12px">
+                    <a class="btn btn-primary large" href="#signupForm" id="signupNow">Start free trial</a>
+                </div>
+            </div>
+        </section>
+<div class="wave-divider">
+  <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+    <path d="M0,96L80,101.3C160,107,320,117,480,133.3C640,149,800,171,960,176C1120,181,1280,171,1360,165.3L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z" fill="#ffffff"></path>
+  </svg>
+</div>
+        <!-- FOOTER -->
+        <footer id="contact" class="footer section" data-reveal="delay-3">
+            <div class="container footer-grid">
+                <div>
+                    <strong>PayFlex</strong>
+                    <p>Modern payments for growing businesses</p>
+                </div>
+
+                <div>
+                    <h5>Products</h5>
+                    <ul>
+                        <li>Gateway</li>
+                        <li>Invoicing</li>
+                        <li>Payouts</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5>Company</h5>
+                    <ul>
+                        <li>About</li>
+                        <li>Careers</li>
+                        <li>Docs</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5>Support</h5>
+                    <ul>
+                        <li>Help Center</li>
+                        <li>Contact</li>
+                        <li>Privacy</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <small>© <span id="yr"></span> PayFlex. All rights reserved.</small>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- SCRIPTS -->
+    <script src="script.js"></script>
+    <!-- analytics loader (optional): include your cleaned analytics.js -->
+    <script src="analytics.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+<lottie-player 
+    src="payment-success.json" 
+    background="transparent"  
+    speed="1"  
+    style="width: 280px; height: 280px;"  
+    loop  
+    autoplay>
+</lottie-player>
+
+</body>
+
+</html>
