@@ -52,5 +52,5 @@ Brand logos (SVG/PNG)
 Custom payment graphics
 
 
-Screenchot of landing page---[<img src="https://github.com/user-attachments/assets/eab31f13-7f12-4c5d-9de1-dc46061f3c93" width="600">
-]
+<img src="https://github.com/user-attachments/assets/eab31f13-7f12-4c5d-9de1-dc46061f3c93" width="600">
+
